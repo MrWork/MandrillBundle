@@ -110,11 +110,11 @@ class Dispatcher
             $message->setFromEmail($this->defaultSender);
         }
 
-        if (strlen($message->getFromName()) == 0 && null !== $this->defaultSenderName) {
+        if (strlen((string)$message->getFromName()) == 0 && null !== $this->defaultSenderName) {
             $message->setFromName($this->defaultSenderName);
         }
 
-        if (strlen($message->getSubaccount()) == 0 && null !== $this->subaccount) {
+        if (strlen((string)$message->getSubaccount()) == 0 && null !== $this->subaccount) {
             $message->setSubaccount($this->subaccount);
         }
 
