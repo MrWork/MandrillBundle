@@ -106,7 +106,7 @@ class Dispatcher
             return false;
         }
 
-        if (strlen($message->getFromEmail()) == 0) {
+        if ($message->getFromEmail() === null || strlen($message->getFromEmail()) == 0) {
             $message->setFromEmail($this->defaultSender);
         }
 
